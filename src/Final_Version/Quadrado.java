@@ -30,16 +30,21 @@ public class Quadrado {
     public char getCaracter() {
         char resultado = ' ';
         switch (statusQuadrado) {
-            case vazio:
+            case VAZIO:
                 resultado = 'V';
-            case acerto:
+                break;
+            case ACERTO:
                 resultado = 'A';
-            case navio:
+                break;
+            case NAVIO:
                 resultado = 'N';
-            case oceano:
+                break;
+            case OCEANO:
                 resultado = 'O';
-            case erro:
+                break;
+            case ERRO:
                 resultado = 'E';
+                break;
         }
         return resultado;
     }

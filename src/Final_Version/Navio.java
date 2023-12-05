@@ -6,21 +6,9 @@ public class Navio {
     private List<Quadrado> NovoNavio;
     private TipoNavio tipoNavio;
 
-    public Navio(List<Quadrado> novoNavio, TipoNavio tipoNavio) {
-        NovoNavio = novoNavio;
+    public Navio(List<Quadrado> campos, TipoNavio tipoNavio) {
+        NovoNavio = campos;
         this.tipoNavio = tipoNavio;
-    }
-
-    public List<Quadrado> getCampos() {
-        return NovoNavio;
-    }
-
-    public TipoNavio getTipoNavio() {
-        return tipoNavio;
-    }
-
-    public void add(Quadrado quadrado) {
-        NovoNavio.add(quadrado);
     }
 
     public boolean isLocalOk (Navio navio1, List<Navio> navios, Tabuleiro tabuleiro) {
@@ -44,4 +32,17 @@ public class Navio {
         }
         return false;
     }
+
+    public List<Quadrado> getCampos() {
+        return NovoNavio;
+    }
+
+    public TipoNavio getTipoNavio() {
+        return tipoNavio;
+    }
+
+    public void add(Quadrado quadrado) {
+        NovoNavio.add(quadrado);
+    }
+
 }

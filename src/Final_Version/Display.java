@@ -26,20 +26,26 @@ public class Display {
 
     public void printMenu() {
         System.out.println("Batalha Naval está iniciando ....................");
-        System.out.println("                                     |__\n" +
-                "                                     |\\/\n" +
-                "                                     ---\n" +
-                "                                     / | [\n" +
-                "                              !      | |||\n" +
-                "                            _/|     _/|-++'\n" +
-                "                        +  +--|    |--|--|_ |-\n" +
-                "                     { /|__|  |/\\__|  |--- |||__/\n" +
-                "                    +---------------___[}-_===_.'____                 /\\\n" +
-                "                ____`-' ||___-{]_| _[}-  |     |_[___\\==--            \\/   _\n" +
-                " __..._____--==/___]_|__|_____________________________[___\\==--____,------' .7\n" +
-                "|                                                                           /\n" +
-                " \\_________________________________________________________________________|\n" +
-                "  Matthew Bace");
+        System.out.println("                                     # #  ( )\n" +
+                "                                  ___#_#___|__\n" +
+                "                              _  |____________|  _\n" +
+                "                       _=====| | |            | | |==== _\n" +
+                "                 =====| |.---------------------------. | |====\n" +
+                "   <--------------------'   .  .  .  .  .  .  .  .   '--------------/\n" +
+                "     \\                                                             /\n" +
+                "      \\___________________________________________________________/\n" +
+                "  wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww\n" +
+                "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww\n" +
+                "   wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww ");
+
+        System.out.println("\n" +
+                "██████╗  █████╗ ████████╗ █████╗ ██╗     ██╗  ██╗ █████╗     ███╗   ██╗ █████╗ ██╗   ██╗ █████╗ ██╗     \n" +
+                "██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗██║     ██║  ██║██╔══██╗    ████╗  ██║██╔══██╗██║   ██║██╔══██╗██║     \n" +
+                "██████╔╝███████║   ██║   ███████║██║     ███████║███████║    ██╔██╗ ██║███████║██║   ██║███████║██║     \n" +
+                "██╔══██╗██╔══██║   ██║   ██╔══██║██║     ██╔══██║██╔══██║    ██║╚██╗██║██╔══██║╚██╗ ██╔╝██╔══██║██║     \n" +
+                "██████╔╝██║  ██║   ██║   ██║  ██║███████╗██║  ██║██║  ██║    ██║ ╚████║██║  ██║ ╚████╔╝ ██║  ██║███████╗\n" +
+                "╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚══════╝\n" +
+                "                                                                                                        \n");
     }
 
     public void printMensagens(String mensagem) {
@@ -50,7 +56,7 @@ public class Display {
         System.out.println("Pressione: \n" +
                 "\t 1 - Jogar \n" +
                 "\t 2 - Ver as regras do jogo \n" +
-                "\t 3 - Sair do jogo \n");
+                "\t 3 - Sair do jogo");
     }
 
     public void printMensagemSair() {
@@ -65,42 +71,6 @@ public class Display {
     }
 
     public void printTabuleiro(Tabuleiro tabuleiro) {
-        /*System.out.print("   ");
-        for (int i = 1; i < tabuleiro.getSizeX(); i++) {
-            if (i < 10) {
-                System.out.print(i + "  ");
-            } else {
-                System.out.print(" ");
-            }
-        }
-        System.out.println();
-        for (int row = 1; row < tabuleiro.getSizeX(); row++) {
-            if (row < 10) {
-                System.out.print(row + "  ");
-            } else {
-                System.out.print(row + " ");
-            }
-            for (int col = 1; col < tabuleiro.getSizeY(); col++) {
-                switch (tabuleiro.getQuadrado(row, col).getCaracter()) {
-                    case 'O':
-                        System.out.print(ANSI_BLUE_BACKGROUND + " " + ANSI_RESET + " ");
-                        break;
-                    case 'A':
-                        System.out.print(ANSI_RED_BACKGROUND + " " + ANSI_RESET + " ");
-                        break;
-                    case 'N':
-                        System.out.print(ANSI_YELLOW_BACKGROUND + " " + ANSI_RESET + " ");
-                        break;
-                    case 'E':
-                        System.out.print(ANSI_BLACK_BACKGROUND + " " + ANSI_RESET + " ");
-                        break;
-                    case 'V':
-                        System.out.print(ANSI_CYAN_BACKGROUND + " " + ANSI_RESET + " ");
-                        break;
-                }
-            }
-            System.out.println();
-        }*/
         System.out.print("    ");
         for (int i = 0; i < tabuleiro.getSizeX(); i++) {
             System.out.print(i + "  ");
@@ -115,19 +85,19 @@ public class Display {
             for (int col = 0; col < tabuleiro.getSizeY(); col++) {
                 switch (tabuleiro.getQuadrado(row, col).getCaracter()) {
                     case 'O':
-                        System.out.print(ANSI_BLUE_BACKGROUND + " " + ANSI_RESET + " ");
+                        System.out.print(ANSI_BLUE_BACKGROUND + "  " + ANSI_RESET + " ");
                         break;
                     case 'A':
-                        System.out.print(ANSI_RED_BACKGROUND + " " + ANSI_RESET + " ");
+                        System.out.print(ANSI_RED_BACKGROUND + "  " + ANSI_RESET + " ");
                         break;
                     case 'N':
-                        System.out.print(ANSI_YELLOW_BACKGROUND + " " + ANSI_RESET + " ");
+                        System.out.print(ANSI_YELLOW_BACKGROUND + "  " + ANSI_RESET + " ");
                         break;
                     case 'E':
-                        System.out.print(ANSI_BLACK_BACKGROUND + " " + ANSI_RESET + " ");
+                        System.out.print(ANSI_BLACK_BACKGROUND + "  " + ANSI_RESET + " ");
                         break;
                     case 'V':
-                        System.out.print(ANSI_CYAN_BACKGROUND + " " + ANSI_RESET + " ");
+                        System.out.print(ANSI_CYAN_BACKGROUND + "  " + ANSI_RESET + " ");
                         break;
                 }
             }

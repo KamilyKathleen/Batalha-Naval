@@ -22,12 +22,11 @@ public class BatalhaNaval {
         while (!sair) {
             display.printOpcoesMenuPrincipal();
             System.out.println("Escolha uma opção: ");
-            System.out.println();
             escolha = input.getIntegerOpcaoMenu();
             switch (escolha) {
                 case 1:
                     display.printMensagens("Você escolheu jogar o jogo ");
-                    jogo.logicaJogo();
+                    jogo.adicionarNavios();
                     break;
                 case 2:
                     display.printMensagens("\033[H\033[2J");

@@ -5,7 +5,6 @@ import java.util.List;
 public class Jogador {
     private List<Navio> navios;
     private Tabuleiro tabuleiro;
-    private int naviosRestantes = 0;
 
     public Jogador(List<Navio> navios, Tabuleiro tabuleiro) {
         this.navios = navios;
@@ -27,20 +26,20 @@ public class Jogador {
     public boolean handleTiro(int x, int y) {
         for (Navio navio : navios) {
             for (Quadrado quadrado : navio.getCampos()) {
-                if (quadrado.getY() == y && quadrado.getX() == x && quadrado.getStatusQuadrado().equals(StatusQuadrado.navio)) {
-                    quadrado.setStatusQuadrado(StatusQuadrado.acerto);
-                    tabuleiro.getQuadrado(x, y).setStatusQuadrado(StatusQuadrado.acerto);
+                if (quadrado.getY() == y && quadrado.getX() == x && quadrado.getStatusQuadrado().equals(StatusQuadrado.NAVIO)) {
+                    quadrado.setStatusQuadrado(StatusQuadrado.ACERTO);
+                    tabuleiro.getQuadrado(x, y).setStatusQuadrado(StatusQuadrado.ACERTO);
                     System.out.println("Você acertou um navio!");
                     return true;
-                } else if (quadrado.getY() == y && quadrado.getX() == x && quadrado.getStatusQuadrado().equals(StatusQuadrado.acerto)) {
-                    quadrado.setStatusQuadrado(StatusQuadrado.acerto);
-                    tabuleiro.getQuadrado(x, y).setStatusQuadrado(StatusQuadrado.acerto);
+                } else if (quadrado.getY() == y && quadrado.getX() == x && quadrado.getStatusQuadrado().equals(StatusQuadrado.ACERTO)) {
+                    quadrado.setStatusQuadrado(StatusQuadrado.ACERTO);
+                    tabuleiro.getQuadrado(x, y).setStatusQuadrado(StatusQuadrado.ACERTO);
                     System.out.println("Você já acertou esse lugar!");
                     return false;
                 }
             }
         }
-        tabuleiro.getQuadrado(x, y).setStatusQuadrado(StatusQuadrado.erro);
+        tabuleiro.getQuadrado(x, y).setStatusQuadrado(StatusQuadrado.ERRO);
         System.out.println("Errou!");
         return false;
     }
